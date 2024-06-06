@@ -11,4 +11,6 @@ Rails.application.routes.draw do
   get "/instruments" => "instruments#index"
   get "/instruments/:id" => "instruments#show"
   patch "/instruments/:id" => "instruments#update"
+  post "/instruments" => "instruments#create"
+  delete "/instruments/:id" => "instruments#destroy"
 end

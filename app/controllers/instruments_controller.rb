@@ -19,4 +19,20 @@ class InstrumentsController < ApplicationController
     )
     render :show
   end
+
+  def create
+    @instrument = Instrument.create(
+      brand: params[:brand],
+      model: params[:model],
+      category: params[:category],
+      year_invented: params[:year_invented]
+    )
+    render :show
+  end
+
+  def destroy
+    @instrument = Instrument.find_by(id: params[:id])
+    @instrument.destroy
+    render json: {message: "Product deleted"}
+  end
 end
