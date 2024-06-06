@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   get "/instruments" => "instruments#index"
+  get "/instruments/:id" => "instruments#show"
 end
